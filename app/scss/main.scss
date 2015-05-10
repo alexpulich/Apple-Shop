@@ -65,9 +65,8 @@ body {
 
 .content,
 .container {
-    position:relative;
+    position: relative;
 }
-
 /* header */
 
 .phone-link {
@@ -227,8 +226,7 @@ body {
         position: relative;
         z-index: 999;
     }
-
-    .user-nav__item.basket{
+    .user-nav__item.basket {
         background: url("../images/icons/basket.png") 11px center no-repeat;
         padding: 14px 18px 12px 49px;
         margin-left: 4px;
@@ -238,11 +236,9 @@ body {
             background-position-x: 10px;
             color: #5c7b98;
             @include basket-boxes;
-
             .basket__list {
                 display: block;
             }
-
             .user-nav__link {
                 color: #613993;
             }
@@ -273,7 +269,6 @@ body {
         &:nth-child(2n) {
             background: #f8fafb;
         }
-
         &:hover {
             .basket__link {
                 color: #613993
@@ -283,7 +278,7 @@ body {
     .basket__link {
         color: #00b9fe;
         width: 158px;
-        display: table-cell;        
+        display: table-cell;
         vertical-align: middle;
     }
     .basket__img {

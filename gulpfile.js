@@ -78,7 +78,9 @@ gulp.task('useref', function () {
   return gulp.src('app/*.html')
     .pipe(assets)
     .pipe(gulpif('*.js', uglify()))
-    .pipe(gulpif('*.css', minifyCss()))
+    .pipe(gulpif('*.css', minifyCss({
+      compatibility: 'ie8'
+    })))
     .pipe(assets.restore())
     .pipe(useref())
     .pipe(gulp.dest('dist'));
