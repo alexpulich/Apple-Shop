@@ -1,0 +1,36 @@
+doctype
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(http-equiv="X-UA-compatible", content="IE=edge")
+	block title
+		title ЭпплShop
+	//SEO
+	meta(name="description", content="Описание сайта")
+	meta(name="keywords", content="ключевые, слова")
+	meta(name="author", content="Пулич Алексей")
+	link(rel="shortcut icon", type="image/x-icon", href="/favicon.ico")
+	//END SEO
+	//VENDOR CSS
+	//build:css css/vendor.min.css
+	//bower:css
+	link(rel="stylesheet", href="bower/normalize.css/normalize.css")
+	//endbower		
+	//endbuild
+	//END VENDOR CSS
+	//CSS
+	//build:css fonts/fonts.min.css
+	link(rel="stylesheet", href="fonts/fonts.css")
+	//endbuild
+	//build:css css/main.min.css
+	link(rel="stylesheet", href="css/main.css")
+	//endbuild
+	// [if IE 8]
+		<link rel="stylesheet" href="css/ie.css">
+		<![endif]
+	//END CSS
+	//Modernizr
+	//build:js js/modernizr.js
+	script(src="bower/modernizr/modernizr.js")
+	//END Modernizr
+	//endbuild

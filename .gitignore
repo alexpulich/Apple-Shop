@@ -1,0 +1,4 @@
+node_modules
+app/bower
+app/*.html
+app/css/*.css
