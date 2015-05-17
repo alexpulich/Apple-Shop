@@ -9,20 +9,21 @@ block content
 			div.slideshow
 				div.slideshow__display
 					img(src="images/slideshow/1.jpg", alt="").slideshow__display-pic
-				ul.slideshow__list
-					li.slideshow__nav
+				div.slideshow__slider
+					div.slideshow__list-wrap
+						ul.slideshow__list
+							-var imgs = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']
+							each obj, i in imgs
+								if i === 0
+									li.slideshow__item.active
+										a.slideshow__pic(href="")
+											img(src="images/slideshow/"+obj, alt="").slideshow__img
+								else 
+									li.slideshow__item
+										a.slideshow__pic(href="")
+											img(src="images/slideshow/"+obj, alt="").slideshow__img
+					div.slideshow__controls
 						a.slideshow__nav-link.prev
-					-var imgs = ['2.jpg', '3.jpg', '4.jpg']
-					each obj, i in imgs
-						if i === 0
-							li.slideshow__item.active
-								a.slideshow__pic(href="")
-									img(src="images/slideshow/"+obj, alt="").slideshow__img
-						else 
-							li.slideshow__item
-								a.slideshow__pic(href="")
-									img(src="images/slideshow/"+obj, alt="").slideshow__img
-					li.slideshow__nav
 						a.slideshow__nav-link.next
 		div.goods__description
 			div.goods__title
