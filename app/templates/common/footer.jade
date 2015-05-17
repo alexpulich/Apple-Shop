@@ -1,27 +1,29 @@
 footer.footer
 		div.wrap
 			div.logo-mono
-				| ЭпплShop
+				a(href="/").logo-mono__link
+					| ЭпплShop
 			nav.subnav
 				-var subnavhead = ['О магазине', 'Каталог', 'Контакты'];
 				-var subnavabout = {'О нас': '', 'Наши цены': '', 'Наши скидки': '', 'Акции': ''};
 				-var subnavcatalog = {'Смартфоны': '', 'Планшеты': '', 'Компьютеры': '', 'Аксессуары': ''};
 				-var subnavcontacts = {'Телефоны': '', 'Адреса': '', 'Карта проезда': '', 'Обратная связь': ''};
 				each val in subnavhead
-					ul.subnav__list
-						li.subnav__item=val
-						if val === 'О магазине'
-							each key, value in subnavabout
-								li.subnav__item
-									a.subnav__link(href=key)=value
-						else if val === 'Каталог'
-							each key, value in subnavcatalog
-								li.subnav__item
-									a.subnav__link(href=key)=value
-						else if val === 'Контакты'
-							each key, value in subnavcontacts
-								li.subnav__item
-									a.subnav__link(href=key)=value
+					div.subnav__column
+						div.subnav__heading=val
+						ul.subnav__list
+							if val === 'О магазине'
+								each key, value in subnavabout
+									li.subnav__item
+										a.subnav__link(href=key)=value
+							else if val === 'Каталог'
+								each key, value in subnavcatalog
+									li.subnav__item
+										a.subnav__link(href=key)=value
+							else if val === 'Контакты'
+								each key, value in subnavcontacts
+									li.subnav__item
+										a.subnav__link(href=key)=value
 			div.subsocials
 				ul.subsocials__apps-list
 					li.subsocials__item
