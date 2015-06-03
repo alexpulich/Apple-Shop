@@ -12,15 +12,15 @@ block content
 				div.slideshow__slider
 					div.slideshow__list-wrap
 						ul.slideshow__list
-							-var imgs = ['1.jpg', '2.jpg', '3.jpg', '4.jpg']
+							-var imgs = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '2.jpg']
 							each obj, i in imgs
 								if i === 0
 									li.slideshow__item.active
-										a.slideshow__pic(href="")
+										a.slideshow__pic(href="", data-fullsize="images/slideshow/"+obj)
 											img(src="images/slideshow/"+obj, alt="").slideshow__img
 								else 
 									li.slideshow__item
-										a.slideshow__pic(href="")
+										a.slideshow__pic(href="", data-fullsize="images/slideshow/"+obj)
 											img(src="images/slideshow/"+obj, alt="").slideshow__img
 					div.slideshow__controls
 						a.slideshow__nav-link.prev

@@ -470,15 +470,19 @@ body {
 
 .slideshow__list {
     list-style: none;
-    height: 75px;
+    width: 9999px;
+    // height: 75px;
+    position: relative;
+    left: 0;
 }
 
 .slideshow__list-wrap {
-    height: 75px;
+    // height: 75px;
     overflow: hidden;
     display: inline-block;
     vertical-align: middle;
     width: 245px;
+    z-index: 999;
 }
 
 .slideshow__controls {
@@ -520,6 +524,7 @@ body {
 }
 
 .slideshow__item {
+    float: left;
     margin-right: 3px;
 }
 
